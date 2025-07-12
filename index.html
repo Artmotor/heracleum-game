@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь мероприятий Института ДПО ВГАУ</title>
+    <meta name="description" content="Календарь мероприятий для ветеринаров, работников сельского хозяйства, преподавателей и студентов. Повышение квалификации, конференции, семинары в ВГАУ.">
+    <meta name="keywords" content="событийный календарь, Event календарь, календарь событий, календарь вгау, мероприятия вгау, график мероприятий, скачать календарь, план-график, календарь мероприятий, ветеринария, сельское хозяйство, агрообразование, ВГАУ, повышение квалификации, конференции, семинары, аграрный университет, обучение, ДПО, для преподавателей, для студентов, для фермеров, для ветеринаров, Иваново, сельские жители, городские жители">
+    <meta name="author" content="Институт ДПО ВГАУ">
+    <meta property="og:title" content="Календарь мероприятий Института ДПО ВГАУ">
+    <meta property="og:description" content="Мероприятия для ветеринаров, работников сельского хозяйства и преподавателей. Повышение квалификации в ВГАУ.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dpo.v-gau.ru/calendar">
+    <title>Борщевик: Миф или Реальность</title>
+    <link rel="shortcut icon" href="https://static.tildacdn.com/tild6163-6637-4330-a661-633362306233/favicon.ico" type="image/x-icon" /> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <img src="images/logo.png" alt="Логотип" class="logo">
+            <div class="user-info">
+                <img id="user-photo" src="images/icons/user.png" alt="">
+                <span id="user-name"></span>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="screen" id="start-screen">
+                <h1>Борщевик: Миф или Реальность</h1>
+                <p>Проверь свои знания о самом опасном растении России!</p>
+                <button id="start-btn" class="btn">Начать игру</button>
+                <button id="rules-btn" class="btn secondary">Правила</button>
+            </div>
+
+            <div class="screen" id="quiz-screen" style="display: none;">
+                <div class="progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span id="progress-text">1/25</span>
+                </div>
+                <div class="question-container">
+                    <h2 id="question-text">Загрузка вопроса...</h2>
+                </div>
+                <div class="options">
+                    <button class="btn option-btn" id="myth-btn">Миф</button>
+                    <button class="btn option-btn" id="reality-btn">Реальность</button>
+                </div>
+                <div class="timer-container">
+                    <div class="timer" id="timer">10</div>
+                </div>
+            </div>
+
+            <div class="screen" id="result-screen" style="display: none;">
+                <h2 id="result-title">Результат</h2>
+                <div id="result-explanation"></div>
+                <button id="next-btn" class="btn">Следующий вопрос</button>
+            </div>
+
+            <div class="screen" id="final-screen" style="display: none;">
+                <h2>Викторина завершена!</h2>
+                <div class="score-container">
+                    <p>Ваш результат: <span id="final-score">0</span>/25</p>
+                    <p id="score-message"></p>
+                </div>
+                <div class="achievements" id="achievements"></div>
+                <button id="restart-btn" class="btn">Играть снова</button>
+                <button id="share-btn" class="btn secondary">Поделиться</button>
+            </div>
+
+            <div class="screen" id="rules-screen" style="display: none;">
+                <h2>Правила игры</h2>
+                <ol class="rules-list">
+                    <li>Вам будет представлено 25 утверждений о борщевике</li>
+                    <li>Выберите, является ли утверждение мифом или реальностью</li>
+                    <li>На каждый вопрос дается 10 секунд</li>
+                    <li>За правильный ответ вы получаете 1 балл</li>
+                    <li>После ответа вы увидите объяснение</li>
+                </ol>
+                <button id="back-btn" class="btn">Назад</button>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-container">
+        <div class="footer-left">
+            <div class="footer-social">
+				<a href="https://t.me/vgaudpo" target="_blank" rel="noopener noreferrer">
+                    <img src="https://static.tildacdn.com/tild3532-3534-4430-b662-346535353530/Telegram.svg" alt="Telegram" class="social-icon">
+                </a>
+			<a href="https://dpo.v-gau.ru/programs/sosnowskys-hogweed" class="footer-link" target="_blank" rel="noopener noreferrer">
+                Ступенька к профессионализму
+            </a>
+        </div>
+		</div>       
+        <div class="footer-center">
+            <div class="footer-social">
+                <a href="https://vk.com/dpovgau" target="_blank" rel="noopener noreferrer">
+                    <img src="https://v-gau.ru/upload/medialibrary/d07/r8b5w1cgrf8fjmn53iy10pdif88cadai.png" alt="VKontakte" class="social-icon">
+                </a>
+			<a href="https://antiborschevik.info/map" class="footer-link" target="_blank" rel="noopener noreferrer">
+                Карта распространения борщевика</a>
+		</div>
+        </div>
+    </div>		
+			<p>* * *</p>
+			<p>© НПО "Артель", 2025 | Для экологического просвещения</p>
+        </footer>
+    </div>
+
+    <script src="js/questions.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
