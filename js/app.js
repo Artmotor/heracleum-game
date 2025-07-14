@@ -3,7 +3,7 @@ const state = {
     currentQuestion: 0,
     score: 0,
     timer: null,
-    timeLeft: 15,
+    timeLeft: 10,
     userData: {
         name: 'Игрок',
         photo: 'images/icons/user.png'
