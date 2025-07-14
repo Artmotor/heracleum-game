@@ -112,7 +112,7 @@ function showQuestion() {
 
 // Запуск таймера
 function startTimer() {
-    state.timeLeft = 15;
+    state.timeLeft = 10;
     elements.timerElement.textContent = state.timeLeft;
     
     state.timer = setInterval(() => {
